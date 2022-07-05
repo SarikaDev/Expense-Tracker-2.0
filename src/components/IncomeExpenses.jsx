@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import {FaSortAmountUp,FaSortAmountDown} from 'react-icons/fa';
-
+import { FaSortAmountUp, FaSortAmountDown } from 'react-icons/fa';
+// import TransactionChart from './TransactionChart';
 
 export const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
@@ -16,16 +16,22 @@ export const IncomeExpenses = () => {
     amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) * -1
   );
 
+  
+
+
   return (
     <div className="inc-exp-container">
-        <div>
-          <h4>Income </h4>
-  <p className="money plus">{income} Rs <FaSortAmountUp/></p>
-        </div>
-        <div>
-          <h4>Expense</h4>
-  <p className="money minus">{expense} Rs <FaSortAmountDown/></p>
-        </div>
+      <div>
+        <h4>Income </h4>
+        <p className="money plus">{income} Rs <FaSortAmountUp /></p>
       </div>
+      <div>
+        <h4>Expense</h4>
+        <p className="money minus">{expense} Rs <FaSortAmountDown /></p>
+
+      </div>
+      {/* <TransactionChart /> */}
+
+    </div>
   )
 }
