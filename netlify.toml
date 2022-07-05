@@ -1,6 +1,4 @@
-exports.handler = async () => {
-  return {
-    statusCode: 200,
-    body: 'hello world!',
-  };
-};
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
