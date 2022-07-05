@@ -30,8 +30,6 @@ const TransactionChart = () => {
         Legend
     );
     const { transactions } = useContext(GlobalContext);
-    // const amounts = transactions.map(transaction => transaction.amount);
-    // const timeStamp = transactions.map(transactions => transactions.timeStamp);
 
 
 

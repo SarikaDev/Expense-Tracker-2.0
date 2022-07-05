@@ -1,7 +1,7 @@
-import React, { useState, useContext  } from 'react'
+import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
 import { v4 as uuidv4 } from 'uuid';
-
+import { toast } from 'react-toastify';
 export const AddTransaction = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState(0);
@@ -19,6 +19,16 @@ export const AddTransaction = () => {
     addTransaction(newTransaction);
     setAmount(0);
     setText('');
+    toast.success("Added Succesfully ", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
+
   }
 
   return (

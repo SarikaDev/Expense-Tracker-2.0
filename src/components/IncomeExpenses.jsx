@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { FaSortAmountUp, FaSortAmountDown } from 'react-icons/fa';
-// import TransactionChart from './TransactionChart';
 
 export const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
